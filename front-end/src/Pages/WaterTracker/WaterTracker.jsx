@@ -1,17 +1,23 @@
 import DynamicBarChart from "../../components/DynamicBarChart"
 import "./WaterTracker.css"
+import AddButton from "../../components/AddButton"
 
 export default function WaterTracker() {
     return (
         <div>
             
             <h1>WATER TRACKER</h1>
-
-            <h2>Your week in a glass</h2>
-            <h3>Goal: 8 cups of water a day</h3>
-            <h3>Your streak: (x) days 🔥</h3>
+            <br />
+            <div>
+              <h2 className="goal">Goal: 8 cups of water a day</h2>
+              <h2>Your streak: (x) days 🔥</h2>
+              <br />
+              <h2>Your week in a glass</h2>
+            </div>
+            
             
             <DynamicBarChart />
+            <AddButton />
         </div>
     )
 }

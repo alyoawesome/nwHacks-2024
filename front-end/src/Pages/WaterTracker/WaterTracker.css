@@ -9,7 +9,14 @@ h2 {
 }
 
 h3 {
-    font-size: medium;
+    font-size: large;
     text-align: left;
     padding-left: 10%;
+}
+
+.goal {
+    font-size: x-large;
+    text-align: match-parent;
+    color:gold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }

@@ -28,7 +28,6 @@ export default function DynamicBarChart() {
         try {
             const response = await fetch('/hello');
             const result = await response.json();
-            console.log(result);
             setBars(result);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -38,23 +37,17 @@ export default function DynamicBarChart() {
         fetchData();
     }, []);
 
-    console.log(bars);
-
     const cups = [];
-    for (let i = 0; i < Object.keys(bars).length; i++) {
+    for (const i of Object.keys(bars)) {
         cups.push(bars[i]);
     }
-
-    console.log(cups);
-
-    // const numCups; //[0, 8, 0, 1, 2, 3, 5] // update this from db
 
     const data = {
         labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
         datasets: [
             {
                 label: "Number of cups",
-                data: [1,2,3],
+                data: cups,
                 backgroundColor: ["blue", "yellow"],
                 borderColor: "black",
                 borderWidth: 1
