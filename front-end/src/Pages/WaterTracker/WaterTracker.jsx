@@ -9,7 +9,7 @@ export default function WaterTracker() {
     return (
         <div>
             
-            <h1>WATER TRACKER</h1>
+            <h1>Water Tracker</h1>
             <br />
             <div>
               <h2 className="goal">Goal: 8 cups of water a day</h2>

@@ -6,7 +6,7 @@ export default function AddButton(props) {
 
     return (
         <div>
-            <button onClick={incrementCounter()}>
+            <button onClick={incrementCounter}>
                 {/* <img href="/images/add-button.png" alt="Add button" width={20}></img> */}
                 I drank a cup of water!
             </button>
