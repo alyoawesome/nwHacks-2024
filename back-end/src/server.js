@@ -1,10 +1,14 @@
 import express from 'express';
-
+import {MongoClient} from 'mongodb';
 
 const app = express();
 
 
+const url = 'mongodb+srv://water:water@cluster0.brrnrse.mongodb.net/'
+const client = new MongoClient(url);
+
 app.get('/hello', async (req, res) => {
+
     res.send("Hello"); 
   });
 
