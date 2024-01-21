@@ -8,8 +8,10 @@ const url = 'mongodb+srv://water:water@cluster0.brrnrse.mongodb.net/'
 const client = new MongoClient(url);
 
 app.get('/hello', async (req, res) => {
-
-    res.send("Hello"); 
+    await client.connect();
+    const db = client.db('water');
+    const user = await db.collection('users').findOne({ id: "12345" });
+    res.json(user);
   });
 
 
