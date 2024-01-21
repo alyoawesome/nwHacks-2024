@@ -26,7 +26,6 @@ export default function DynamicBarChart(props) {
         try {
             const response = await fetch('/hello');
             const result = await response.json();
-            console.log(result);
             setBars(result);
         } catch (error) {
             console.error('Error fetching data:', error);
