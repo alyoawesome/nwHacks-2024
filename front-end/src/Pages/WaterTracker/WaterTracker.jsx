@@ -19,7 +19,7 @@ export default function WaterTracker() {
             </div>
             
             
-            <DynamicBarChart />
+            <DynamicBarChart date={date}/>
             <br />
             <AddButton date={date}/>
         </div>

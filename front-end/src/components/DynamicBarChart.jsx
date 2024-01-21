@@ -17,7 +17,7 @@ ChartJS.register(
     Tooltip,
 )
 
-export default function DynamicBarChart() {
+export default function DynamicBarChart(props) {
 
     const [bars, setBars] = useState(0);
 
@@ -50,8 +50,12 @@ export default function DynamicBarChart() {
         }
     }
 
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const index = days.indexOf(props.date);
+    days[index] = "Today";
+
     const data = {
-        labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        labels: days,
         datasets: [
             {
                 label: "Number of cups",
