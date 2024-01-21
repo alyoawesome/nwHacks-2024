@@ -3,8 +3,7 @@ import {
     BarElement,
     CategoryScale,
     LinearScale,
-    Tooltip,
-    Legend,
+    Tooltip
 } from "chart.js"
 
 import { Bar } from "react-chartjs-2"
@@ -16,7 +15,6 @@ ChartJS.register(
     CategoryScale,
     LinearScale,
     Tooltip,
-    Legend,
 )
 
 export default function DynamicBarChart() {
@@ -42,13 +40,23 @@ export default function DynamicBarChart() {
         cups.push(bars[i]);
     }
 
+    const colours = [];
+
+    for (const i of cups) {
+        if (i < 8) {
+            colours.push("aqua");
+        } else {
+            colours.push("yellow")
+        }
+    }
+
     const data = {
         labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
         datasets: [
             {
                 label: "Number of cups",
                 data: cups,
-                backgroundColor: ["blue", "yellow"],
+                backgroundColor: colours,
                 borderColor: "black",
                 borderWidth: 1
             }
