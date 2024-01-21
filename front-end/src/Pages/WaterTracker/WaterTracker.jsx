@@ -4,7 +4,7 @@ import AddButton from "../../components/AddButton"
 
 export default function WaterTracker() {
 
-  const date = Date("2024-01-23").substring(0,3);
+  const date = Date().substring(0,3);
   
     return (
         <div>
@@ -19,7 +19,7 @@ export default function WaterTracker() {
             </div>
             
             
-            <DynamicBarChart />
+            <DynamicBarChart date={date}/>
             <br />
             <AddButton date={date}/>
         </div>
