@@ -25,7 +25,8 @@ export default function DynamicBarChart(props) {
         const fetchData = async () => {
         try {
             const response = await fetch('/hello');
-            const result = response.json();
+            const result = await response.json();
+            console.log(result);
             setBars(result);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -35,10 +36,15 @@ export default function DynamicBarChart(props) {
         fetchData();
     }, []);
 
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
     const cups = [];
-    for (const i of Object.keys(bars)) {
+    for (const i of days) {
         cups.push(bars[i]);
     }
+
+    const index = days.indexOf(props.date);
+    days[index] = "Today";
 
     const colours = [];
 
@@ -46,13 +52,9 @@ export default function DynamicBarChart(props) {
         if (i < 8) {
             colours.push("aqua");
         } else {
-            colours.push("yellow")
+            colours.push("yellow");
         }
     }
-
-    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    const index = days.indexOf(props.date);
-    days[index] = "Today";
 
     const data = {
         labels: days,
