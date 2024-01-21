@@ -17,6 +17,7 @@ export default function WaterTracker() {
             
             
             <DynamicBarChart />
+            <br />
             <AddButton />
         </div>
     )
