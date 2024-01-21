@@ -1,7 +1,7 @@
-export default function AddButton() {
+export default function AddButton(props) {
 
     function incrementCounter() {
-        // alert("hi");
+        console.log(props.date);
     }
 
     return (

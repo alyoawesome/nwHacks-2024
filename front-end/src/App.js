@@ -6,8 +6,8 @@ function App() {
   
   return (
     <div className="App">
-      <WaterTracker />
       <Login />
+      <WaterTracker />
     </div>
   );
 }
