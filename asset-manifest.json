@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/alyoawesome/nwHacks-2024.git/static/css/main.615355ac.css",
+    "main.js": "/alyoawesome/nwHacks-2024.git/static/js/main.1b6a9ee0.js",
+    "static/js/787.ab44a5ba.chunk.js": "/alyoawesome/nwHacks-2024.git/static/js/787.ab44a5ba.chunk.js",
+    "index.html": "/alyoawesome/nwHacks-2024.git/index.html",
+    "main.615355ac.css.map": "/alyoawesome/nwHacks-2024.git/static/css/main.615355ac.css.map",
+    "main.1b6a9ee0.js.map": "/alyoawesome/nwHacks-2024.git/static/js/main.1b6a9ee0.js.map",
+    "787.ab44a5ba.chunk.js.map": "/alyoawesome/nwHacks-2024.git/static/js/787.ab44a5ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.615355ac.css",
+    "static/js/main.1b6a9ee0.js"
+  ]
+}
