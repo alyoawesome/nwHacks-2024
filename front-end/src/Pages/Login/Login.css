@@ -1,0 +1,31 @@
+body {
+    background-color: lightblue;
+  }
+
+h1{
+    color:black ;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+  }
+
+.form-control{
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px; 
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+  
